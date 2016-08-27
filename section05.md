@@ -28,7 +28,9 @@ exp = lambda m. lambda n. n (times m) c1;
 
 ## 5.2.5
 
-Not answered yet.
+```ocaml
+sub = lambda m. lambda n. n prd m;
+```
 
 ## 5.2.6
 
