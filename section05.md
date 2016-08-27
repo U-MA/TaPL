@@ -12,3 +12,9 @@ not = lambda b. b fls tru;
 ```ocaml
 scc' = lambda n. lambda s. lambda z. n s (s z);
 ```
+
+## 5.2.3
+
+```ocaml
+times' = lambda m. lambda n. lambda s. lambda z. m (n s) z;
+```
