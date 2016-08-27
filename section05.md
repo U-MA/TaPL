@@ -21,7 +21,10 @@ times' = lambda m. lambda n. lambda s. lambda z. m (n s) z;
 
 ## 5.2.4
 
-Not answered yet.
+```ocaml
+c1 = lambda s. lambda z. s z;
+exp = lambda m. lambda n. n (times m) c1;
+```
 
 ## 5.2.5
 
