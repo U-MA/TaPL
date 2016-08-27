@@ -34,7 +34,11 @@ sub = lambda m. lambda n. n prd m;
 
 ## 5.2.6
 
-Not answered yet.
+O(n) steps.  
+  
+```prd``` creates n pairs by n steps.  
+Finally ```prd``` return first element of last pair.  
+So, ```prd``` needs O(n) steps.  
 
 ## 5.2.7
 
