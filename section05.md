@@ -42,7 +42,9 @@ So, ```prd``` needs O(n) steps.
 
 ## 5.2.7
 
-Not answered yet.
+```ocaml
+equal = lambda m. lambda n. and (iszro (m prd n)) (iszro (n prd m));
+```
 
 ## 5.2.8
 
