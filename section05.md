@@ -48,7 +48,15 @@ equal = lambda m. lambda n. and (iszro (m prd n)) (iszro (n prd m));
 
 ## 5.2.8
 
-Not answered yet.
+```ocaml
+nil = lambda c. lambda n. n;
+cons = lambda h. lambda t. lambda c. lambda n. c h (t c n);
+isnil = lambda l. l (lambda h. lambda t. fls) tru;
+head = lambda l. l tru nil;
+tail = lambda l.
+  fst (l (lambda x. lambda p. pair (snd p) (cons x (snd p)))
+         (pair nil nil));
+```
 
 ## 5.2.9
 
