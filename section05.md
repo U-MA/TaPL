@@ -60,7 +60,21 @@ tail = lambda l.
 
 ## 5.2.9
 
-Not answered yet.
+```test``` evaluates all arguments because evaluation strategy is call-by-value.  
+
+gの定義の中で、```test``` を使用すると、発散するので```if``` を使用した。  
+具体的には```factorial c0``` を評価する際に```test``` のすべての引数を評価し、
+```test``` の第3引数の評価時に再び```factorial c0``` が現れる。  
+そのため、```test``` を用いると発散する。  
+```test``` の第3引数を評価しないようにするために、
+元の第3引数をラムダ抽象で覆う必要がある。
+第3引数をラムダ抽象で覆うと同時に第2引数もラムダ抽象で覆う必要がある。
+
+```ocaml
+g' = lambda fct. lambda n. test (iszro n c0)
+      (lambda x. c1)
+      (lambda x. (times n (fct (prd n)))) c0;
+```
 
 ## 5.2.10
 
