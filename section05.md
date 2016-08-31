@@ -78,7 +78,10 @@ g' = lambda fct. lambda n. test (iszro n c0)
 
 ## 5.2.10
 
-Not answered yet.
+```ocaml
+cn = lambda f. lambda m. if iszero m then zero else scc (f (pred m));
+churchnat = fix ch;
+```
 
 ## 5.2.11
 
