@@ -85,7 +85,12 @@ churchnat = fix ch;
 
 ## 5.2.11
 
-Not answered yet.
+```ocaml
+ss = lambda s. lambda l. test (isnil l)
+  (lambda x. c0)
+  (lambda x. plus (head l) (s (tail l))) c0;
+listsum = fix ss;
+```
 
 ## 5.3.3
 
