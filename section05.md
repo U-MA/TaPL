@@ -108,7 +108,29 @@ listsum = fix ss;
 
 ## 5.3.6
 
-Not answered yet.
+* Full β-reduction  
+```t1 -> t1' / t1 t2 -> t1' t2```  
+```t1 -> t1' / λx. t1 -> λx. t1'```  
+```t2 -> t2' / t1 t2 -> t1 t2'```  
+```(λx. t12) t1 -> [x |-> t1]t12```
+  
+* Normal order  
+```na -> t1' / na1 t2 -> t1' t2```  
+```t2 -> t2' / nanf1 t2 -> nanf1 t2'```  
+```t1 -> t1' / λx. t1 -> λx. t1'```  
+
+```
+nf ::= λx. nf
+       nanf
+nanf ::= x
+         nanf nf
+na ::= x
+       t1 t2
+```
+
+* Lazy evaluation  
+```t1 -> t1' / t1 t2 -> t1' t2```  
+```(λx. t1) t12 -> [x |-> t12]t1```  
 
 ## 5.3.7
 
